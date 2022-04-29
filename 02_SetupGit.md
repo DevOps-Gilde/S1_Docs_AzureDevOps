@@ -1,3 +1,10 @@
+
+# TODO Rewrite for VS Code and Azure DevOps
+
+External Information sufficient
+
+https://docs.microsoft.com/en-us/azure/devops/repos/git/clone?view=azure-devops&tabs=visual-studio-2019
+
 # How to work with Git
 
 # General
@@ -17,7 +24,7 @@ In the last tutorial we used a "*fork*" to create a copy of the project in your 
 ## Get your project url
 
 In this Step we will now copy the project to your computer. Therefore we will use the "*clone*" function on Github by pressing the green **Code** button. 
-<img src="./images/get_repo_url.PNG" width="400"/>
+<br><img src="./images/get_repo_url.PNG" width="400"/><br>
 
 In the clone window you can copy your *project url*
 
@@ -26,16 +33,16 @@ In the clone window you can copy your *project url*
 ## Add project to visual studio code
 
 When opening a new Window of Visual Studio Code you will see the *Getting Started* page which offers you the option to *Clone Git Repository...*
-<img src="./images/clone_repo.jpg" width="400"/>
+<br><img src="./images/clone_repo.jpg" width="400"/><br>
 
 When you click on this option a new window will open on the top where you can enter your *project url* from Github
-<img src="./images/add_repo_url.PNG" width="400"/>
+<br><img src="./images/add_repo_url.PNG" width="400"/><br>
 
 After pressing *Enter*, you will be asked where to store the project on your computer.
-<img src="./images/select_folder.PNG" width="400"/>
+<br><img src="./images/select_folder.PNG" width="400"/><br>
 
 After selecting a location, your Project will be copied to your computer and VS Code will offer you in the bottom right to open the cloned project.
-<img src="./images/open_project.PNG" width="400"/>
+<br><img src="./images/open_project.PNG" width="400"/><br>
 
 You can either open the project in the current window or open it in a new window of VS Code.
 
@@ -43,7 +50,7 @@ You can either open the project in the current window or open it in a new window
 
 In the new window you will now see all files of the projects.
 
-<img src="./images/work_in_project.PNG" width="400"/><br>
+<br><img src="./images/work_in_project.PNG" width="400"/><br>
 
 When you start working in the project, you will notice that the colour of the filenames will change to:
 
