@@ -29,8 +29,6 @@ Azure AppServicePlan and WebApp:
 
 ## Creating the Pipeline
 
-
-
 Now start writing the infrastructure pipeline to deploy an App Service Plan and a WebApp in Azure step by step
 
 Warning: The formatting of YAML (yml) files is based on spaces and tabs and therefor the following lines should be copied with care.
@@ -39,7 +37,7 @@ Starting with making the variable group available to the pipeline. From now on w
 variables:
 - group: infravars
 
-Next, we need to set a trigger which will run the pipeline after every commit on this repository:
+Next, we could set a trigger which will run the pipeline after every commit on this repository:
 (we set it to none to avoid unwanted pipeline runs)
 
 trigger: none
@@ -67,6 +65,28 @@ If you want to learn more about the concept of a pipeline you can do it here:
 
 https://docs.microsoft.com/de-de/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops
 
+## Azure DevOps Variable Groups
+
+Create a New Variable Group called "infravars"
+<br><img src="./images/pipelinevariablegroups.PNG" /><br>
+
+
+<br><img src="./images/variablegroups.PNG" /><br>
+
+We all are use the same Subscription and same Resource Group but
+everybody uses his own App Service Plan and his own Webapp.
+
+Therefore, pick unique names e.g. robsplan21 or robswebapp21 for your App Service Plan 
+and Webapp variables.
+
+Use for Resource Group (rg) ws-devops.
+
+* asp = App Service Plan must be unique in each resource group (your own)
+* rg   = Resource Group must be unique in each subscription (use ws-devops)
+* so   = Service Connection Name which you have set in your project (Settings -> Service connections)
+* wa  = Webapp must be unique worldwide (your own)
+
+Of course, you can use your own variables names, they must correspond with your pipeline.
 
 ## Code runner
 
@@ -87,50 +107,6 @@ jobs:
 To learn more about the Workflow Syntax and Jobs visit:
 https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs
 
+## Setup Pipeline in Azure DevOps
 
-
-## Deployment of AppService and WebApp
-
-Next the Script creates with the Build in Azure CLI "`uses: azure/CLI@v1`" the AppService Plan and the corresponding WebApp. 
-
-```
-    - name: Azure CLI script
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
-          az appservice plan create -g ${{ secrets.rg }} -n ${{ secrets.asp }} --is-linux --number-of-workers 1 --sku B1
-          az webapp create -g ${{ secrets.rg }} -p ${{ secrets.asp }} -n ${{ secrets.webapp }}  --runtime "node|10.14"
-```
-
-AppService with Azure CLI
-<br> https://docs.microsoft.com/de-de/cli/azure/appservice/plan?view=azure-cli-latest
-
-WebApp with Azure CLI
-<br> https://docs.microsoft.com/de-de/cli/azure/webapp?view=azure-cli-latest#az_webapp_create
-
-
-You will see there is a tiny difference in your File to this Code Snipped.
-Just Copy over the Missing Part.
-
-# 2. Run your Pipeline
-
-After you Set up your Secrets and fixed the Code in your Repository.
-You can try to run your Workflow.
-To do so go to Actions and select the Infra workflow on the Left site.
-
-Now Select Run workflow on the Right side.
-
-<br><img src="./images/runWorkflow.PNG" width="800"/><br>
-
-## Workflow Progress
-
-Wait for your Workflow to finish.
-If the Task does not run through you may ask one of us to Help you out.
-## Check your WebApp is online after approx. 5 minutes
-
-https://`[yourWebAppName]`.azurewebsites.net/
-
-You should see a &quot;Hey, Node developers&quot; welcome screen.
-
-Congratulations, you have deployed your first WebApp infrastructure.
- Now, you can go ahead and deploy some code to your WebApp.
+<br><img src="./images/createpipeline.PNG" /><br>

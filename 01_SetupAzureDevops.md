@@ -25,8 +25,10 @@ For further informtation about Azure Devops Projects visit this [Website](https:
 
 ## Setup your Git Project in Azure DevOps
 
-First you need to select the Organe Repository Symbol on the left hand Side and then Initialize it on the bottom Right. 
+First you need to select the Organe Repository Symbol on the left hand Side and then Import it on the bottom.
 
-<br><img src="./images/CreateRepoAzureDevops.png" width="400"/><br>
+Use "https://github.com/DevOps-Gilde/S1_Code_AzureDevOps" to Import the necessary files
+
+<br><img src="./images/CreateRepoAzureDevops.png" /><br>
 
 After this Step you may Continue with how to Setup Git Locally
