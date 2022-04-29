@@ -43,28 +43,28 @@ You can either open the project in the current window or open it in a new window
 
 In the new window you will now see all files of the projects.
 
-<img src="./images/work_in_project.PNG" width="400"/>
+<img src="./images/work_in_project.PNG" width="400"/><br>
 
 When you start working in the project, you will notice that the colour of the filenames will change to:
 
 * Green *U* = New File
 * Yellow *M*= Changed File
 * Red *D*= Removed File
-  <img src="./images/edit_file.PNG" width="400"/>
+  <br><img src="./images/edit_file.PNG" width="400"/><br>
   The Change of colour shows you that Git has noticed that you changed a file in the project
 
 When you now click again on the *Git symbol* on the left, you can see a list of all changed files.
-<img src="./images/add_change.PNG" width="400"/>
+<br><img src="./images/add_change.PNG" width="400"/><br>
 
 When you select one of the files, Git will show you the difference between the last version of the file and the current file.
-<img src="./images/changes_in_git.PNG" width="600"/>
+<br><img src="./images/changes_in_git.PNG" width="600"/><br>
 
 ### Create a Commit
 
 To finally save the changes and add a new version to git you need to make a commit which contains all changed files you want to bundle together. Therefore you need to select the changes you want to add by presseing the **plus** next to the filename. All added files are then displayed in the "Stage" area.
 
 To create a commit which contains all staged files, you need to add a **Commit Message** and press *Enter* 
-<img src="./images/create_commit.PNG" width="400"/>
+<br><img src="./images/create_commit.PNG" width="400"/><br>
 
 The *Commit* saves now all the changes made in the files and can be used to revert changes if needed.
 
@@ -72,17 +72,17 @@ The *Commit* saves now all the changes made in the files and can be used to reve
 
 To save the changes in the cloud we need to push our commits to Github. Therefor you need to click on the three dots **...** in the top right of the git window.
 In this Popup you can click in *Push* to upload your changes.
-<img src="./images/push_changes.PNG" width="400"/>
+<br><img src="./images/push_changes.PNG" width="400"/><br>
 
 #### Authorize in Github
 
 To *Push* the changes, you need to login to your *Github* account. Therefore a window will popup which brings you to a *Github* login page and asks you login.
-<img src="./images/Sign_in.PNG" width="400"/>
+<br><img src="./images/Sign_in.PNG" width="400"/><br>
 When you are logged into your account you will be asked if you want to connect your *Github* account with *VS Code*, which is necessary so *VS Code* can upload the changes to your project.
-<img src="./images/authorization.PNG" width="400"/>
+<br><img src="./images/authorization.PNG" width="400"/><br>
 
 When it was successful you will see this screen. And you should be able to *push* your changes to *Github*.
-<img src="./images/auth_success.PNG" width="400"/>
+<br><img src="./images/auth_success.PNG" width="400"/><br>
 
 After *Pushing* your *commit* you can now also see your changes in your GitHub Project.
 
