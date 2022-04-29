@@ -9,7 +9,7 @@ variables:
 - group: infravars
 
 stages:
-- stage: Create AppService Plan
+- stage: CreateAppServicePlan
   displayName: Create App Service Plan stage
   jobs:
   - job: Build
