@@ -27,17 +27,17 @@ For the second step various options exist:
 ## How to import repository into Azure DevOps
 
 Initially Azure DevOps creates a default repository that has the same name as the project. Our starter project can be directly imported into Azure DevOps. The screenshot below shows how an existing GitHub repository can be imported:
-<br><img src="./images/repo_import_trigger.PNG" /><br>
+<br><img src="./images/repo_import_trigger.png" /><br>
 
 You will be then prompted for the GitHub repository. The link is as follows: https://github.com/DevOps-Gilde/S1_Code_AzureDevOps. You can use the default name.
-<br><img src="./images/repo_import_source.PNG" /><br>
+<br><img src="./images/repo_import_source.png" /><br>
 
 After successful import you have now an additional entry when you browse your repositories.
 
 ## Adjusting Code (In-place Azure DevOps Repo)
 
 To adjust existing files select the file you want to edit. The screen below shows the resulting situation:
-<br><img src="./images/repo_inplace_editing.PNG" /><br>
+<br><img src="./images/repo_inplace_editing.png" /><br>
 
 Use the "Edit" button at the right-hand side to switch into edit mode. After the first change an additional "Commit" button will appear. Use this button to trigger the commit. Just go with the defaults after beng prompted and click "Commit" to confirm.
 
