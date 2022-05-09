@@ -1,21 +1,26 @@
 # azure-dev-hackathon
 
-## Prerequirement
+## Prerequirements
 
-Git Client
-<br> https://git-scm.com/download/
+The following prerequisites are only required if you don't use in place browser editing:
+- Git Client: [download link](https://git-scm.com/download/)
+- Visual Studio Code: [download link](
+https://code.visualstudio.com/download)
 
-Visual Studio Code
-<br> https://code.visualstudio.com/download
+## Session preparation
 
-Tasks to do:
+We strongly recommend that you carry out the tasks below before the hackathon session starts. It helps you to maximize the time for coding:
 
-1. Setup your Git Hub Account [here](/01_SetupGitHub.md)<br>
-2. How to use Git Locally [here](/01.5_SetupGit.md)
-3. Create Repository Secrets [here](/02_SetupGitHubActionSecrets.md)
-4. Create Infrastructure Pipeline [here](/03_SetupInfrastructure.md)
-5. Create WebApp Pipeline [here](/04_SetupWebsite.md)
-6. **Optional Extra Task:** Create Monitoring [here](/05_Monitoring.md)
+1. Setup Azure DevOps Account [here](/01_SetupAzureDevops.md)<br>
+2. Setup Azure DevOps Git Repository [here](/02_SetupAzureDevopsRepo_.md)
+3. Create Azure DevOps Service Connection [here](/03_SetupAzureDevopsRepoServiceConnections.md)
 
-:white_check_mark: We also created a working solution located in the branch [Solution](https://github.com/DevOps-Gilde/webapp/tree/solution) of your forked repository that covers all tasks except monitoring. 
+## Session implementation tasks
+
+The following impleentation tasks will expect you:
+
+4. Create Infrastructure Pipeline [here](/04_SetupInfrastructure.md)
+5. Create WebApp Pipeline [here](/05_SetupWebsite.md)
+
+:white_check_mark: We also created a working solution located in the branch [Solution](https://github.com/DevOps-Gilde/S3_Docs_GitHubActionsTerraform/tree/solution) of your imported repository that covers all tasks. 
 If at any Point you need assistance nevertheless do not hesitate to ask. We are here to Help you.
