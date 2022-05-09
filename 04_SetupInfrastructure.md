@@ -25,10 +25,10 @@ Our YAML file will reference various things such as names for azure service inst
 ## Azure DevOps Variable Groups
 
 Create a New Variable Group called "infravars"
-<br><img src="./images/pl_vargrp_create_1.PNG" /><br>
+<br><img src="./images/pl_vargrp_create_1.png" /><br>
 
 
-<br><img src="./images/pl_vargrp_create_2.PNG" /><br>
+<br><img src="./images/pl_vargrp_create_2.png" /><br>
 
 We all are use the same Subscription and same Resource Group but
 everybody uses his own App Service Plan and his own Webapp.
@@ -93,27 +93,27 @@ The next paragraphs describe how you setup your pipelines and how to run them. T
 
 The UI handling for **creating pipelines** differs a bit if your pipeline is the initial one. In that case you have only a button "Create Pipeline". In case of subsequent pipelines you have a button to add new pipelines and a list of existing ones.
 
-<br><img src="./images/pl_overview.PNG" /><br>
+<br><img src="./images/pl_overview.png" /><br>
 
 Clicking "New pipeline" starts the wizard that takes you through the creation process:
 1. **Connect:** Select "Azure Repos Git" as your code source
 2. **Select:** Select the repository "webapp_devops" you created proviously via import
 3. **Configure:** 
   
-    Select "Existing Azure Pipeline YAML file".In the subsequent dialog select the file "infra.yaml" from the main branch.  You will then see the yaml file for review.<br><img src="./images/pl_create_review.PNG" /><br>
+    Select "Existing Azure Pipeline YAML file".In the subsequent dialog select the file "infra.yaml" from the main branch.  You will then see the yaml file for review.<br><img src="./images/pl_create_review.png" /><br>
 
     On the top righ-corner you have a button "Run" with a drop down. If you click "Run" two major things happen: (1) A pipeline is created with a default name and (2) the created pipeline is started. Expand the dropdown and select "Save". You will see then a screen as below:
-    <br><img src="./images/pl_create_conf_save.PNG" /><br>
+    <br><img src="./images/pl_create_conf_save.png" /><br>
     Azure DevOps uses the name of the repo "webapp_devops" as default name. Especially if you have multiple pipelines that does not make so much sense. Therefore we will rename our pipeline to avoid confusion. The following is just one possible way that minimizes the explanations. Click on the arraw next to "webapp_devops" which will bring you back to the main menu with the rocket icon.
     
 To **run an existing pipeline** display the pipelines. Hovering over an entry will display an additional context menu represented by three dots "..." at the right-hand side of an entry. Clicking on the dots will allow to trigger various actions such as running the pipeline.
-<br><img src="./images/pl_overview_ctx_menu.PNG" /><br>
+<br><img src="./images/pl_overview_ctx_menu.png" /><br>
 
 Pick **"Rename/ Move"** to rename the pipeline from the context menu. In the subsequent dialog you can specify a new name. Leave folder name empty and confirm.
-<br><img src="./images/pl_rename_move.PNG" /><br>
+<br><img src="./images/pl_rename_move.png" /><br>
 
 Pick **"Run pipeline" to start a pipeline** from the context menu. Go with the defaults in subsequent dailoges when you are asked for branch name and other things. Azure DevOps will display a new screen that reflects the running pipeline as shown below:
-<br><img src="./images/pl_run_steps.PNG" /><br>
+<br><img src="./images/pl_run_steps.png" /><br>
 
 Every logical step is displayed as a separate entry. You can click on the entry to see detailed output. The icon represents the state (gray = not started; in progress; failed succeeded). Most of the logical steps you did not program directly but are triggered automatically by Azure DevOps. A few comments regarding the entries you see:
 1. **Job:** Results from the default job Azure DevOps assumes. The expandable entries below the Job are the steps the job consists of.
@@ -129,6 +129,6 @@ We have created a single user with read permission for the shared resource group
 - Password: Please contact one of the supervisers
 
 Log in to the [azure portal](https://portal.azure.com). Use the EMail address as indicated above. Go to the resource group `ws-devops` by clicking as follows in the home screen below:
-<br><img src="./images/az_resgrp.PNG" /><br>
+<br><img src="./images/az_resgrp.png" /><br>
 
 Enter the name of your resources in the red marked field to limit the display. If your pipeline run succeeded you should see two icons in the resource group that have the name you created. If they are there you mastered successfully the infrastructure part.
