@@ -1,38 +1,38 @@
-# How to setup a new Service Connections in Azure Devops
+# 1. Introduction to Service Connections
 
-# General
+You should now have Completed the Following things:
+1. Setup your Azure DevOps Organization/ Project
+2. Setup your Azure DevOps Repository
 
-## What is are Azure DevOps Service Connections?
-
-Service Connections Store User Credentials that are used to Authenticate the DevOps Pipeline against an Environment in our case this is Azure.
+Next you will set up an Azure DevOps Service Connection. Service Connections Store User Credentials that are used to Authenticate the DevOps Pipeline against an Environment in our case this is Azure.
 
 [Microsoft Docs AzDevOps Service Connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml)
 
-## How to Setup Service Connections?
+# 2. Setting up the Service Connection
 
 Please read the following 5 Instructions carefully before continuing.
 
-1. In your Project you can fint the Project Settings on the Bottom Left. 
+1. In your Project you can find the Project Settings on the Bottom Left. 
 
 > Note the Side Menu might be collabsed on your Screen 
 
 Open Project Settings:
-<br><img src="./images/ProjectSettings.PNG" /><br>
+<br><img src="./images/svcconn_prj_settings_coll.PNG" /><br>
 
 2. Select Service Connections:
 
 > You might need to Scroll down in the List
 
-<br><img src="./images/ServiceConnections.PNG" /><br>
+<br><img src="./images/svcconn_prj_settings_exp.PNG" /><br>
 
 3. Select Azure Resourcee Manager Scroll down and Click Next.
 
-<br><img src="./images/AzureResourceManager.PNG" /><br>
+<br><img src="./images/svcconn_create_options_arm.PNG" /><br>
 
 4. You will need to Select Service Principal Manual to use the Azure Subscription we provided. 
 
-<br><img src="./images/AzureResourceManagerManual.PNG" /><br>
+<br><img src="./images/svcconn_create_options_man.PNG" /><br>
 
 5. Ask for the Required Credentials to create the Service Connection
 
-<br><img src="./images/AzureResourceManagerSetup.PNG" /><br>
+<br><img src="./images/svcconn_create_options_setup.PNG" /><br>
