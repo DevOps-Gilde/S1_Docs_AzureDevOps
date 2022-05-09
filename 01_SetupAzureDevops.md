@@ -26,7 +26,7 @@ To create an organization click on the button "Start Free". An organization is t
 
 After you setup your Organization, setup a new Project inside of it.
 
-<br><img src="./images/ado_create_project.png" width="400"/><br>
+<br><img src="./images/ado_create_project.PNG" width="400"/><br>
 
 The screenshot below shows the home of your new project after successful creation.
 
