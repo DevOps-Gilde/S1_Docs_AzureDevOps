@@ -126,7 +126,7 @@ Every logical step is displayed as a separate entry. You can click on the entry 
 
 We have created a single user with read permission for the shared resource group we are using in this hackathon. Login into Azure with the following credentials:
 - Username: devops_hack_reader@mscloudguild.onmicrosoft.com
-- Password: Hack2022DevOps_Caku7937
+- Password: Ask your supersvisor
 
 Log in to the [azure portal](https://portal.azure.com). Use the EMail address as indicated above. Go to the resource group `ws-devops` by clicking as follows in the home screen below:
 <br><img src="./images/az_resgrp.PNG" /><br>
