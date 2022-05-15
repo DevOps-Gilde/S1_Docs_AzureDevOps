@@ -1,25 +1,25 @@
 # 1. Introduction to Azure DevOps
 
-Azure DevOps is a Software as a service (SaaS) platform from Microsoft that provides an end-to-end DevOps toolchain for developing and deploying software.  It also integrates with most leading tools on the market and is a great option for orchestrating a DevOps toolchain.
+Azure DevOps is a Software as a service (SaaS) platform from Microsoft that provides an end-to-end DevOps toolchain for developing and deploying software. It also integrates with most leading tools on the market and is a great option for orchestrating a DevOps toolchain. So far Azure DevOps has been the main enterprise grade toolchain offering for DevOps. However, with the acquisition of GitHub things will change in the long run. The new announced successor will be GitHub and GitHub actions.
 
 # 2. Setting up Azure DevOps
 
 ## Sign in to Azure DevOps
 
-If you have already used Azure DevOps you can just use an existing organization and add a new project. The following describe the steps if you never did before:
+If you have already used Azure DevOps you can just use an existing organization and add a new project. The following steps describe a general way how you can navigate to an already existing organization or create a new one. If you know the name of your organization you can also directly jump to the management portal for Azure DevOps organizations that have the URL `https://dev.azure.com/<name of your organization>`:
 - Go to https://dev.azure.com/
 
   The picure below shows the initial screen. It states "Sign in" on the right-hand side if you are not yet signed in.
   <br><img src="./images/ado_signin_initial.png" width="400"/><br>
 
-- Login in with your CapGemini Account
+- Login in with your account
 
-  Click “Sign in” on the Top Right Corner. Select your Organisation Account or enter your Company Mail Address when prompted. When you are successfully signed in you are Redirected to https://dev.azure.com again.
+  Click “Sign in” on the Top Right Corner. Select your existing organisation account or enter your Company Mail Address for a new one when prompted. When you are successfully signed in you are redirected to https://dev.azure.com again.
   <br><img src="./images/ado_signin_finished.png" width="400"/><br>
 
-## Create a new Azure DevOps Organization
+## Navigate to/ Create the Azure DevOps Organization
 
-To create an organization click on the button "Start Free". An organization is the top level entity that hosts your projects. State the name of your organization and select "Private as project visibility when prompted as shown below:
+Click "Start Free" to continue. If you have already created an organization before you will be redirected there. Otherwise you will be prompted for the details to create one. An organization is the top level entity that hosts your projects. State the name of your organization and select "Private as project visibility when prompted as shown below:
 <br><img src="./images/ado_create_org.png" width="400"/><br>
 
 ## Create a new Azure Devops Project
