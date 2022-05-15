@@ -30,18 +30,16 @@ Create a New Variable Group called "infravars"
 
 <br><img src="./images/pl_vargrp_create_2.png" /><br>
 
-We all are use the same Subscription and same Resource Group but
-everybody uses his own App Service Plan and his own Webapp.
+We all use the same Subscription and the Resource Group `ws-devops` but everybody uses his own App Service Plan and his own Webapp.
 
-Therefore, pick unique names e.g. robsplan21 or robswebapp21 for your App Service Plan 
-and Webapp variables.
+Therefore, pick unique names e.g. robsplan21 or robswebapp21 for your App Service Plan and Webapp variables.
 
 Use for Resource Group (rg) ws-devops.
 
-* asp = App Service Plan must be unique in each resource group (your own)
-* rg   = Resource Group must be unique in each subscription (use ws-devops)
-* so   = Service Connection Name which you have set in your project (Settings -> Service connections)
-* wa  = Webapp must be unique worldwide (your own)
+* asp = Name of your unique App Service Plan in `ws-devops`
+* rg = Name of Resource Group which must be `ws-devops`
+* so = Service Connection Name which you have set in your project (Settings -> Service connections)
+* wa = World-wide unique name of your Webapp 
 
 Of course, you can use your own variables names, they must correspond with your pipeline.
 
@@ -74,6 +72,7 @@ After that we define the smallest building block of a pipeline that contains our
 ```YAML
 steps:
 - task: AzureCLI@2
+  displayName: Create WebApp Infra
   inputs:
     azureSubscription: '$(so)'
     scriptType: 'bash'
@@ -112,15 +111,27 @@ To **run an existing pipeline** display the pipelines. Hovering over an entry wi
 Pick **"Rename/ Move"** to rename the pipeline from the context menu. In the subsequent dialog you can specify a new name. Leave folder name empty and confirm.
 <br><img src="./images/pl_rename_move.png" /><br>
 
-Pick **"Run pipeline" to start a pipeline** from the context menu. Go with the defaults in subsequent dailoges when you are asked for branch name and other things. Azure DevOps will display a new screen that reflects the running pipeline as shown below:
-<br><img src="./images/pl_run_steps.png" /><br>
+Pick **"Run pipeline" to start a pipeline** from the context menu. Go with the defaults in subsequent dialogs when you are asked for branch name and other things. Azure DevOps will display a new screen that reflects the  pipeline run.
 
-Every logical step is displayed as a separate entry. You can click on the entry to see detailed output. The icon represents the state (gray = not started; in progress; failed succeeded). Most of the logical steps you did not program directly but are triggered automatically by Azure DevOps. A few comments regarding the entries you see:
+To run a pipeline the very first time explicit approval is required. To grant permission click on the red link `Permission needed`. 
+Clicking the link will display another dialog with a "Permit" button. Click this button and confirm when prompted once more. The screenshot below summarizes all three situations.
+<br><img src="./images/pl_run_approval.PNG" /><br>
+
+Once confirmed execution will resume. You will see first a summary of your pipeline run. The example below shows intentionally an error situation. The explanation shall enable you to fix an error yourself and retrigger a pipeline run. To track down the error you have to click on the error message.
+<br><img src="./images/pl_run_error_sum.PNG" /><br>
+
+You see now a drill down of the logical steps executed. You can click on the entry to see detailed output in the right-hand side. The icon represents the state of the step (gray = not started; in progress; failed succeeded).
+<br><img src="./images/pl_run_error_detailed.png" /><br>
+
+Most of the logical steps you did not program directly but are triggered automatically by Azure DevOps. A few comments regarding the entries you see:
 1. **Job:** Results from the default job Azure DevOps assumes. The expandable entries below the Job are the steps the job consists of.
 2. **Initialize Job:** Internal standard step to initialize the job
 3. **Checkout...** Internal step that transports the designated repo to the execution environment of the pipeline
-4. **Create WebApp** That is the step you programmed in YAML
+4. **Create WebApp Infra** That is the step you programmed in YAML
 5. **Post-Job...-Re port Build Status:** Internal standard operations
+
+In successful run all steps are either states "Succeded" or "Not started". The screenshot below is not matching 100% our example but illustrate the idea.
+<br><img src="./images/pl_run_steps.png" /><br>
 
 ## Check Pipeline Results via Portal
 
