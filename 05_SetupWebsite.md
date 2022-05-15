@@ -18,7 +18,7 @@ Setting up the pipeline follows the same steps as in the infrastructure case (se
 
 Deploying the pipeline follows the same general principles as for the infrastructure. Note the following specifics:
 - It takes approximately 5 minutes until your web site is online
-- The url of the web site follows the default naming patterns which is https://<yourWebAppName>.azurewebsites.net/
+- The url of the web site follows the default naming patterns which is `https://<YourWebAppName>.azurewebsites.net/`
 - Upon success you should see a “Hey, Node developers” welcome screen.
 
 
