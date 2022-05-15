@@ -1,8 +1,8 @@
-# azure-dev-hackathon
+# DevOps-Hackathon (Azure DevOps/ GitHub Actions)
 
 ## Prerequirements
 
-The following prerequisites are only required if you don't use in place browser editing:
+The following prerequisites are **ONLY REQUIRED** if you don't use in place browser editing:
 - Git Client: [download link](https://git-scm.com/download/)
 - Visual Studio Code: [download link](
 https://code.visualstudio.com/download)
