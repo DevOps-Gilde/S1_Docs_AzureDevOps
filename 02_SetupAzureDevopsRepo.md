@@ -18,13 +18,13 @@ We created a repository in GitHub that is intended as starting point. Partially 
 2. Adjusting the code
 
 For the second step various options exist:
-- Using in place editing with the browser within Azure DevOps after import
+- Using in-place editing with the browser within Azure DevOps after import
 
   Only small code changes are required from your side. This is the **recommended method if you are not familiar with local code adjustment** via Visual Studio Code or comparable tooling.
 
 - Using local tools to adjust the code
 
-## How to import repository into Azure DevOps
+## How to import GitHub repository into Azure DevOps
 
 Initially Azure DevOps creates a default repository that has the same name as the project. Our starter project can be directly imported into Azure DevOps. The screenshot below shows how an existing GitHub repository can be imported:
 <br><img src="./images/repo_import_trigger.png" /><br>
@@ -39,7 +39,7 @@ After successful import you have now an additional entry when you browse your re
 To adjust existing files select the file you want to edit. The screen below shows the resulting situation:
 <br><img src="./images/repo_inplace_editing.png" /><br>
 
-Use the "Edit" button at the right-hand side to switch into edit mode. After the first change an additional "Commit" button will appear. Use this button to trigger the commit. Just go with the defaults after beng prompted and click "Commit" to confirm.
+Use the "Edit" button at the right-hand side to switch into edit mode. After the first change an additional "Commit" button will appear. Use this button to trigger the commit. Just go with the defaults after being prompted and click "Commit" to confirm.
 
 ## Adjusting Code (Locally in Visual Studio Code)
 
@@ -53,7 +53,7 @@ When opening a new Window of Visual Studio Code you will see the *Getting Starte
 <br><img src="./images/vc_clone_repo.jpg" width="400"/><br>
 
 To clone the Git repo from Azure DevOps you first need the url. The screenshot below shows the starting point to obtain this url from the Azure DevOps UI:
-<br><img src="./images/repo_clone_trigger.PNG" width="400"/><br>
+<br><img src="./images/repo_clone_trigger.png" width="400"/><br>
 
 When you click on this option a new window will open on the top where you can enter your *project url* from Azure DevOps
 <br><img src="./images/vc_add_repo_url.PNG" width="400"/><br>
