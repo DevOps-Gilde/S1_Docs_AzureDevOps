@@ -12,13 +12,13 @@ https://code.visualstudio.com/download)
 We strongly recommend that you carry out the tasks below before the hackathon session starts. It helps you to maximize the time for coding:
 
 1. Setup Azure DevOps Account [here](/01_SetupAzureDevops.md)<br>
-2. Setup Azure DevOps Git Repository [here](/02_SetupAzureDevopsRepo_.md)
-3. Create Azure DevOps Service Connection [here](/03_SetupAzureDevopsRepoServiceConnections.md)
+2. Setup Azure DevOps Git Repository [here](/02_SetupAzureDevopsRepo.md)
 
 ## Session implementation tasks
 
 The following impleentation tasks will expect you:
 
+3. Create Azure DevOps Service Connection [here](/03_SetupAzureDevopsServiceConnections.md)
 4. Create Infrastructure Pipeline [here](/04_SetupInfrastructure.md)
 5. Create WebApp Pipeline [here](/05_SetupWebsite.md)
 
