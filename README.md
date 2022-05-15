@@ -22,5 +22,5 @@ The following impleentation tasks will expect you:
 4. Create Infrastructure Pipeline [here](/04_SetupInfrastructure.md)
 5. Create WebApp Pipeline [here](/05_SetupWebsite.md)
 
-:white_check_mark: We also created a working solution located in the branch [Solution](https://github.com/DevOps-Gilde/S3_Docs_GitHubActionsTerraform/tree/solution) of your imported repository that covers all tasks. 
+:white_check_mark: We also created a working solution located in the branch [Solution](https://github.com/DevOps-Gilde/S1_Code_AzureDevOps/tree/Solution) of your imported repository that covers all tasks. 
 If at any Point you need assistance nevertheless do not hesitate to ask. We are here to Help you.
