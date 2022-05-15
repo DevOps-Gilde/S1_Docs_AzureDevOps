@@ -115,10 +115,10 @@ Pick **"Run pipeline" to start a pipeline** from the context menu. Go with the d
 
 To run a pipeline the very first time explicit approval is required. To grant permission click on the red link `Permission needed`. 
 Clicking the link will display another dialog with a "Permit" button. Click this button and confirm when prompted once more. The screenshot below summarizes all three situations.
-<br><img src="./images/pl_run_approval.PNG" /><br>
+<br><img src="./images/pl_run_approval.png" /><br>
 
 Once confirmed execution will resume. You will see first a summary of your pipeline run. The example below shows intentionally an error situation. The explanation shall enable you to fix an error yourself and retrigger a pipeline run. To track down the error you have to click on the error message.
-<br><img src="./images/pl_run_error_sum.PNG" /><br>
+<br><img src="./images/pl_run_error_sum.png" /><br>
 
 You see now a drill down of the logical steps executed. You can click on the entry to see detailed output in the right-hand side. The icon represents the state of the step (gray = not started; in progress; failed succeeded).
 <br><img src="./images/pl_run_error_detailed.png" /><br>
