@@ -12,7 +12,7 @@ Next you will deploy the code to your web application. The code we already creat
 
 ## Setup the pipeline
 
-Setting up the pipeline follows the same steps as in the infrastructure case (see there for details). The existing yaml file you havve to use in the pipeline is `app-pipeline.yaml`.
+Setting up the pipeline follows the same steps as in the infrastructure case (see there for details). The existing yaml file you have to use in the pipeline is `app-pipeline.yaml`.
 
 ## Deploy the web app
 
