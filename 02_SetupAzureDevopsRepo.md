@@ -34,14 +34,14 @@ You will be then prompted for the GitHub repository. The link is as follows: htt
 
 After successful import you have now an additional entry when you browse your repositories.
 
-## Adjusting Code (In-place Azure DevOps Repo)
+## Recommended way: Adjusting Code (In-place Azure DevOps Repo)
 
 To adjust existing files select the file you want to edit. The screen below shows the resulting situation:
 <br><img src="./images/repo_inplace_editing.png" /><br>
 
 Use the "Edit" button at the right-hand side to switch into edit mode. After the first change an additional "Commit" button will appear. Use this button to trigger the commit. Just go with the defaults after being prompted and click "Commit" to confirm.
 
-## Adjusting Code (Locally in Visual Studio Code)
+## Optional: Adjusting Code (Locally in Visual Studio Code)
 
 ### Install Git and Visual Studio Code
 
