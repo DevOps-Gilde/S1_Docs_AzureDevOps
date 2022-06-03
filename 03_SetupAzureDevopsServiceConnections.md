@@ -10,7 +10,7 @@ Next you will set up an Azure DevOps Service Connection. Service Connections Sto
 
 # 2. Setting up the Service Connection
 
-Please read the following 5 Instructions carefully before continuing.
+Please read the following instructions carefully before continuing.
 
 1. In your Project you can find the Project Settings on the Bottom Left. 
 
@@ -41,4 +41,4 @@ Open Project Settings:
 
 <br><img src="./images/svcconn_verify.png" /><br>
 
-7. Click "Verify and Save" at the bottom to trigger the creation of the service connection.
+7. Click "Verify and Save" at the bottom to trigger the creation of the service connection. You will then see a new entry with the name specified in the form.
