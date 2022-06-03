@@ -104,8 +104,8 @@ In this Popup you can click in *Push* to upload your changes.
 # Glossar
 
 * Commit => Creates a bundle of all changes with a comment of what has been changed. It can be seen of a Snapshot of the project and its always possible to revert changes by jumping back to a older commit 
-* Clone => Creates a copy of a remote project repository on your local machine
-* Fork => Creates a copy of a git project. The copied version can be used to create customizations on a project. Hence the copy is still connected to the original project it is always possible to apply changes and updates into your customized version of the project.
+* Clone => Creates a copy of a remote project repository on your local machine. 
+* Fork => Creates a copy of a git project. The copied version can be used to create customizations on a project. Hence the copy is still connected to the original project it is always possible to apply changes and updates into your customized version of the project. In contrast to clone the idea is to start a new separate journey.
 * Push => Uploads all changes that have been made on the local project to a remote location (i.e. Github)
 * Pull => Downloads all changes that have been made on the remote project since the last pull. This is needed when working with multiple people on one project so you always have the newest version on your local machine.
 
