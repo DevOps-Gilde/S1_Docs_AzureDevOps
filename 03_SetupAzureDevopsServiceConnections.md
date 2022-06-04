@@ -27,7 +27,7 @@ Open Project Settings:
 
 3. Confirm by clicking on the "Create service connection" Button
 
-<br><img src="./images/svcconn_first_conn.PNG" /><br>
+<br><img src="./images/svcconn_first_conn.png" /><br>
 
 4. Select Azure Resourcee Manager Scroll down and Click Next.
 
