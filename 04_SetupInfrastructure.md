@@ -111,16 +111,16 @@ Clicking "New pipeline" starts the wizard that takes you through the creation pr
     <br><img src="./images/pl_create_conf_save.png" /><br>
     
     Azure DevOps uses the name of the repo "S1_Code_AzureDevOps" as default name for the saved pipeline. Especially if you have multiple pipelines that does not make so much sense. Therefore we will rename our pipeline to avoid confusion. The following is just one possible way that minimizes the explanations. Click on the arrow next to "S1_Code_AzureDevOps" which will bring you back to the main menu with the rocket icon.
-    
-To **run an existing pipeline** display the pipelines. Hovering over an entry will display an additional context menu represented by three dots "..." at the right-hand side of an entry. Clicking on the dots will allow to trigger various actions such as running the pipeline.
+
+To start operations for an existing pipeline click on "Pipelines" below the rocket symbol to display the existing ones. Hovering over an entry will display an additional context menu represented by three dots "..." at the right-hand side of an entry. Clicking on the dots will allow to trigger various actions such as running the pipeline.
 <br><img src="./images/pl_overview_ctx_menu.png" /><br>
 
-Pick **"Rename/ Move"** to rename the pipeline from the context menu. In the subsequent dialog you can specify a new name. Leave folder name empty and confirm.
+Pick **"Rename/ Move" to rename** the pipeline from the context menu. In the subsequent dialog you can specify a new name. Leave folder name empty and confirm.
 <br><img src="./images/pl_rename_move.png" /><br>
 
 Pick **"Run pipeline" to start a pipeline** from the context menu. Go with the defaults in subsequent dialogs when you are asked for branch name and other things. Azure DevOps will display a new screen that reflects the  pipeline run.
 
-To run a pipeline the very first time explicit two approvals are required. To grant permission click on the red link `Permission needed`. Clicking the link will display another dialog with two "Permit" buttons (One for the pipeline and one for the variable group). Click each button and confirm when prompted once more. The screenshots below illustrate the described situations.
+Two explicit approvals are required to run a pipeline the very first time. To grant permission click on the red link `Permission needed`. Clicking the link will display another dialog with two "Permit" buttons (One for the pipeline and one for the variable group). Click each button and confirm when prompted once more. The screenshots below illustrate the described situations.
 <br><img src="./images/pl_run_approval_info.png" /><br>
 <br><img src="./images/pl_run_approval_permit_dlg.png" /><br>
 <br><img src="./images/pl_run_approval_permit_confirm.png" /><br>
