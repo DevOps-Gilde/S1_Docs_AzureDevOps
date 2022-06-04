@@ -25,20 +25,26 @@ Open Project Settings:
 
 <br><img src="./images/svcconn_prj_settings_exp.PNG" /><br>
 
-3. Select Azure Resourcee Manager Scroll down and Click Next.
+3. Confirm by clicking on the "Create service connection" Button
+
+<br><img src="./images/svcconn_first_conn.PNG" /><br>
+
+4. Select Azure Resourcee Manager Scroll down and Click Next.
 
 <br><img src="./images/svcconn_create_options_arm.PNG" /><br>
 
-4. Select "Service Principal (Manual)" to use the Azure Subscription we provided and Click Next.
+5. Select "Service Principal (Manual)" to use the Azure Subscription we provided and Click Next.
 
 <br><img src="./images/svcconn_create_options_man.PNG" /><br>
 
-5. Regarding the settings we can **start with the defaults** as shown below (Screenshot shows only first half of the form). The service connection name you can choose yourself and will be required later. The following values we will paste in the chat during the hands-on session: Subscription (Id/ Name), Service Principal (id/ key) and Tenant id
+6. Regarding the settings we can **start with the defaults** as shown below (Screenshot shows only first half of the form). The service connection name you can choose yourself and will be required later. The following values we will paste in the chat during the hands-on session: Subscription (Id/ Name), Service Principal (id/ key) and Tenant id
 
 <br><img src="./images/svcconn_create_options_setup.PNG" /><br>
 
-6. Test the connection by clicking the "Verify" at the button of the wizard. If you get a success message you can successfully access Azure with the service principal we already setup for you.
+7. Test the connection by clicking the "Verify" at the button of the wizard. If you get a success message you can successfully access Azure with the service principal we already setup for you.
 
 <br><img src="./images/svcconn_verify.png" /><br>
 
-7. Click "Verify and Save" at the bottom to trigger the creation of the service connection. You will then see a new entry with the name specified in the form.
+8. Click "Verify and Save" at the bottom to trigger the creation of the service connection. You will then see a new entry with the name specified in the form.
+
+<br><img src="./images/svcconn_final.png" /><br>

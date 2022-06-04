@@ -45,9 +45,11 @@ Of course, you can use your own variables names, they must correspond with your 
 
 ## Adjusting YAML Pipeline file
 
-The next steps describe the adjustments that have to be done from your side to the existing file `infra-pipeline.yaml` step by step.
+The next steps describe the adjustments that have to be done from your side to the existing file `infra-pipeline.yaml` step by step. The picture below shows where you find the file.
 
-Warning: The formatting of YAML (yml) files is based on spaces and tabs and therefor the following lines should be copied with care.
+<br><img src="./images/pl_rel_file_adj.PNG" /><br>
+
+Warning: The formatting of YAML (yml) files is based on spaces and tabs. Therefore the following lines should be copied with care.
 It is advised to use Visual Studio Code to validate the copied file.  
 Starting with making the variable group available to the pipeline. From now on we can reference any variable that is held in the variable group under libraries (described under 2). Replace the placeholder `<TODO variable group>` with the following code:
 ```YAML
@@ -90,20 +92,25 @@ https://docs.microsoft.com/de-de/azure/devops/pipelines/get-started/key-pipeline
 
 The next paragraphs describe how you setup your pipelines and how to run them. The key icon for all subsequent steps is the rocket symbol on the left-hand side.
 
-The UI handling for **creating pipelines** differs a bit if your pipeline is the initial one. In that case you have only a button "Create Pipeline". In case of subsequent pipelines you have a button to add new pipelines and a list of existing ones.
+To **create a pipeline** click on the button "Pipelines" below the rocket symbol.
+If no pipelines are defined yet you will only see a button "Create Pipeline" to create ones. Otherwise a creation button and existing pipelines are listed. The screesnhot shows the situation after clikcing on "Pipelines", when no pipelines are defined yet,
 
 <br><img src="./images/pl_overview.png" /><br>
 
 Clicking "New pipeline" starts the wizard that takes you through the creation process:
 1. **Connect:** Select "Azure Repos Git" as your code source
-2. **Select:** Select the repository "webapp_devops" you created proviously via import
+2. **Select:** Select the repository "S1_Code_AzureDevOps" you created previously via import
 3. **Configure:** 
   
-    Select "Existing Azure Pipeline YAML file".In the subsequent dialog select the file "infra.yaml" from the main branch.  You will then see the yaml file for review.<br><img src="./images/pl_create_review.png" /><br>
+    Select "Existing Azure Pipelines YAML file".In the subsequent dialog select the file "infra-pipeline.yaml" from the main branch. Make sure you have the main branch selected and click "Continue":
+    <br><img src="./images/pl_create_sel_yaml.png" /><br>
 
+    You will then see the yaml file for review.<br><img src="./images/pl_create_review.png" /><br>
+    
     On the top righ-corner you have a button "Run" with a drop down. If you click "Run" two major things happen: (1) A pipeline is created with a default name and (2) the created pipeline is started. Expand the dropdown and select "Save". You will see then a screen as below:
     <br><img src="./images/pl_create_conf_save.png" /><br>
-    Azure DevOps uses the name of the repo "webapp_devops" as default name. Especially if you have multiple pipelines that does not make so much sense. Therefore we will rename our pipeline to avoid confusion. The following is just one possible way that minimizes the explanations. Click on the arraw next to "webapp_devops" which will bring you back to the main menu with the rocket icon.
+    
+    Azure DevOps uses the name of the repo "S1_Code_AzureDevOps" as default name for the saved pipeline. Especially if you have multiple pipelines that does not make so much sense. Therefore we will rename our pipeline to avoid confusion. The following is just one possible way that minimizes the explanations. Click on the arrow next to "S1_Code_AzureDevOps" which will bring you back to the main menu with the rocket icon.
     
 To **run an existing pipeline** display the pipelines. Hovering over an entry will display an additional context menu represented by three dots "..." at the right-hand side of an entry. Clicking on the dots will allow to trigger various actions such as running the pipeline.
 <br><img src="./images/pl_overview_ctx_menu.png" /><br>
@@ -113,9 +120,10 @@ Pick **"Rename/ Move"** to rename the pipeline from the context menu. In the sub
 
 Pick **"Run pipeline" to start a pipeline** from the context menu. Go with the defaults in subsequent dialogs when you are asked for branch name and other things. Azure DevOps will display a new screen that reflects the  pipeline run.
 
-To run a pipeline the very first time explicit approval is required. To grant permission click on the red link `Permission needed`. 
-Clicking the link will display another dialog with a "Permit" button. Click this button and confirm when prompted once more. The screenshot below summarizes all three situations.
-<br><img src="./images/pl_run_approval.png" /><br>
+To run a pipeline the very first time explicit two approvals are required. To grant permission click on the red link `Permission needed`. Clicking the link will display another dialog with two "Permit" buttons (One for the pipeline and one for the variable group). Click each button and confirm when prompted once more. The screenshots below illustrate the described situations.
+<br><img src="./images/pl_run_approval_info.png" /><br>
+<br><img src="./images/pl_run_approval_permit_dlg.png" /><br>
+<br><img src="./images/pl_run_approval_permit_confirm.png" /><br>
 
 Once confirmed execution will resume. You will see first a summary of your pipeline run. The example below shows intentionally an error situation. The explanation shall enable you to fix an error yourself and retrigger a pipeline run. To track down the error you have to click on the error message.
 <br><img src="./images/pl_run_error_sum.png" /><br>
@@ -130,7 +138,7 @@ Most of the logical steps you did not program directly but are triggered automat
 4. **Create WebApp Infra** That is the step you programmed in YAML
 5. **Post-Job...-Re port Build Status:** Internal standard operations
 
-In successful run all steps are either states "Succeded" or "Not started". The screenshot below is not matching 100% our example but illustrate the idea.
+In successful run all steps are either states "Succeded" or "Not started". The screenshot below is not matching 100% our example but illustrates the idea.
 <br><img src="./images/pl_run_steps.png" /><br>
 
 ## Check Pipeline Results via Portal

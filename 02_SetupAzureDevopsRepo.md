@@ -34,6 +34,10 @@ You will be then prompted for the GitHub repository. The link is as follows: htt
 
 After successful import you have now an additional entry when you browse your repositories.
 
+After the import the branch "Solution" is selected as default. Make sure you switch to the "main" branch. Otherwise you are missing the objective since you see the alraedy fully implemented solution.
+
+<br><img src="./images/repo_import_sw_branch.png" /><br>
+
 ## Recommended way: Adjusting Code (In-place Azure DevOps Repo)
 
 To adjust existing files select the file you want to edit. The screen below shows the resulting situation:
