@@ -112,7 +112,7 @@ Clicking "New pipeline" starts the wizard that takes you through the creation pr
     
     Azure DevOps uses the name of the repo "S1_Code_AzureDevOps" as default name for the saved pipeline. Especially if you have multiple pipelines that does not make so much sense. Therefore we will rename our pipeline to avoid confusion. The following is just one possible way that minimizes the explanations. Click on the arrow next to "S1_Code_AzureDevOps" which will bring you back to the main menu with the rocket icon.
 
-To start operations for an existing pipeline click on "Pipelines" below the rocket symbol to display the existing ones. Hovering over an entry will display an additional context menu represented by three dots "..." at the right-hand side of an entry. Clicking on the dots will allow to trigger various actions such as running the pipeline.
+To **perform operations for an existing pipeline** click on "Pipelines" below the rocket symbol to display the existing ones. Hovering over an entry will display an additional context menu represented by three dots "..." at the right-hand side of an entry. Clicking on the dots will allow to trigger various actions such as running the pipeline.
 <br><img src="./images/pl_overview_ctx_menu.png" /><br>
 
 Pick **"Rename/ Move" to rename** the pipeline from the context menu. In the subsequent dialog you can specify a new name. Leave folder name empty and confirm.
