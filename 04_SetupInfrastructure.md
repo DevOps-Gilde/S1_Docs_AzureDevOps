@@ -47,7 +47,7 @@ Of course, you can use your own variables names, they must correspond with your 
 
 The next steps describe the adjustments that have to be done from your side to the existing file `infra-pipeline.yaml` step by step. The picture below shows where you find the file.
 
-<br><img src="./images/pl_rel_file_adj.PNG" /><br>
+<br><img src="./images/pl_rel_file_adj.png" /><br>
 
 Warning: The formatting of YAML (yml) files is based on spaces and tabs. Therefore the following lines should be copied with care.
 It is advised to use Visual Studio Code to validate the copied file.  
