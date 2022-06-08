@@ -74,16 +74,16 @@ Then we need to set an operating system in which our pipeline will run. Replace 
 
 After that we define the smallest building block of a pipeline that contains our scripting code. The task type `AzureCLI@2`comes with Azure Cli installed so you can execute our commands like would do it on the Azure Portal in the cloud shell. Replace the placeholder `<TODO task>` with the following code. Copy the leeding whitespaces as stated, so that you match the indention of the previous line:
 ```YAML
-steps:
-- task: AzureCLI@2
-  displayName: Create WebApp Infra
-  inputs:
-    azureSubscription: '$(so)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      az appservice plan create -g $(rg) -n $(asp) --is-linux --number-of-workers 1 --sku B1
-      az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node:16-lts"
+    steps:
+    - task: AzureCLI@2
+      displayName: Create WebApp Infra
+      inputs:
+        azureSubscription: '$(so)'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az appservice plan create -g $(rg) -n $(asp) --is-linux --number-of-workers 1 --sku B1
+          az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node:16-lts"
 ```
 
 If you want to learn more about the concept of a pipeline you can do it here:
@@ -107,7 +107,7 @@ Clicking "New pipeline" starts the wizard that takes you through the creation pr
     Select "Existing Azure Pipelines YAML file".In the subsequent dialog select the file "infra-pipeline.yaml" from the main branch. Make sure you have the main branch selected and click "Continue":
     <br><img src="./images/pl_create_sel_yaml.png" /><br>
 
-    You will then see the yaml file for review.<br><img src="./images/pl_create_review.png" /><br>
+    You will then see the yaml file for review (In your case all placeholders MUST BE REPLACED WITH CODE).<br><img src="./images/pl_create_review.png" /><br>
     
     On the top righ-corner you have a button "Run" with a drop down. If you click "Run" two major things happen: (1) A pipeline is created with a default name and (2) the created pipeline is started. Expand the dropdown and select "Save". You will see then a screen as below:
     <br><img src="./images/pl_create_conf_save.png" /><br>
