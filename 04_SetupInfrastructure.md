@@ -81,7 +81,7 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       az appservice plan create -g $(rg) -n $(asp) --is-linux --number-of-workers 1 --sku B1
-      az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node|10.14"
+      az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node:16-lts"
 ```
 
 If you want to learn more about the concept of a pipeline you can do it here:
