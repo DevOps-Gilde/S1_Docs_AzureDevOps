@@ -74,16 +74,16 @@ Then we need to set an operating system in which our pipeline will run. Replace 
 
 After that we define the smallest building block of a pipeline that contains our scripting code. The task type `AzureCLI@2`comes with Azure Cli installed so you can execute our commands like would do it on the Azure Portal in the cloud shell. Replace the placeholder `<TODO task>` with the following code. Copy the leeding whitespaces as stated, so that you match the indention of the previous line:
 ```YAML
-    steps:
-    - task: AzureCLI@2
-      displayName: Create WebApp Infra
-      inputs:
-        azureSubscription: '$(so)'
-        scriptType: 'bash'
-        scriptLocation: 'inlineScript'
-        inlineScript: |
-          az appservice plan create -g $(rg) -n $(asp) --is-linux --number-of-workers 1 --sku B1
-          az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node:16-lts"
+steps:
+- task: AzureCLI@2
+  displayName: Create WebApp Infra
+  inputs:
+    azureSubscription: '$(so)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az appservice plan create -g $(rg) -n $(asp) --is-linux --number-of-workers 1 --sku B1
+      az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node:16-lts"
 ```
 
 If you want to learn more about the concept of a pipeline you can do it here:
