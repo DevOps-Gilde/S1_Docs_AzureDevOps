@@ -14,6 +14,10 @@ Next you will deploy the code to your web application. The code we already creat
 
 Setting up the pipeline follows the same steps as in the infrastructure case (see there for details). The existing yaml file you have to use in the pipeline is `app-pipeline.yaml`.
 
+Note that you have to grant permissions within the pipeline more than once. The picture below illustrates it. It shows the second approval that is required to trigger the deployment. 
+
+<br><img src="./images/pl_run_app_approval.png" /><br>
+
 ## Deploy the web app
 
 Deploying the pipeline follows the same general principles as for the infrastructure. Note the following specifics:

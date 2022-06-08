@@ -49,9 +49,11 @@ The next steps describe the adjustments that have to be done from your side to t
 
 <br><img src="./images/pl_rel_file_adj.png" /><br>
 
-Warning: The formatting of YAML (yml) files is based on spaces and tabs. Therefore the following lines should be copied with care.
-It is advised to use Visual Studio Code to validate the copied file.  
-Starting with making the variable group available to the pipeline. From now on we can reference any variable that is held in the variable group under libraries (described under 2). Replace the placeholder `<TODO variable group>` with the following code:
+Before you start typing a few general remarks about the **yaml format**. Yaml is a declarative approach and describes the steps including the building blocks you need. The various sections of a yaml file are normally a hierarchiael description. The various levels of the hierarchy are indicated by leeding whitespaces. Enumeration of entries at the same hierarchy level are denoted by `-`. A single headline ends with a colon `:`. Key value pairs are also separated by `:`.
+The screenshot below illustrates the points:
+<br><img src="./images/yaml_format_overview.png" /><br>
+
+We start with making the variable group available to the pipeline. From now on we can reference any variable that is held in the variable group under libraries (described under 2). Replace the placeholder `<TODO variable group>` with the following code:
 ```YAML
 variables:
 - group: infravars
@@ -64,24 +66,24 @@ Next, we could set a trigger which will run the pipeline after every commit on t
 trigger: none
 ```
 
-Then we need to set an operating system in which our pipeline will run. Replace the placeholder `<TODO image settings>` with the following code:
+Then we need to set an operating system in which our pipeline will run. Replace the placeholder `<TODO image settings>` with the following code. Copy the leeding whitespaces as stated, so that you match the indention of the previous line:
 ```YAML
-pool:
-  vmImage: ubuntu-latest
+    pool:
+      vmImage: ubuntu-latest
 ```
 
-After that we define the smallest building block of a pipeline that contains our scripting code. The task type `AzureCLI@2`comes with Azure Cli installed so you can execute our commands like would do it on the Azure Portal in the cloud shell. Replace the placeholder `<TODO task>` with the following code:
+After that we define the smallest building block of a pipeline that contains our scripting code. The task type `AzureCLI@2`comes with Azure Cli installed so you can execute our commands like would do it on the Azure Portal in the cloud shell. Replace the placeholder `<TODO task>` with the following code. Copy the leeding whitespaces as stated, so that you match the indention of the previous line:
 ```YAML
-steps:
-- task: AzureCLI@2
-  displayName: Create WebApp Infra
-  inputs:
-    azureSubscription: '$(so)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      az appservice plan create -g $(rg) -n $(asp) --is-linux --number-of-workers 1 --sku B1
-      az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node|10.14"
+    steps:
+    - task: AzureCLI@2
+      displayName: Create WebApp Infra
+      inputs:
+        azureSubscription: '$(so)'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az appservice plan create -g $(rg) -n $(asp) --is-linux --number-of-workers 1 --sku B1
+          az webapp create -g $(rg) -p $(asp) -n $(wa) --runtime "node:16-lts"
 ```
 
 If you want to learn more about the concept of a pipeline you can do it here:

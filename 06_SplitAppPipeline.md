@@ -30,7 +30,7 @@ A special tast type exists For pushing an artefact such as a zip file to Azure a
 ## Downloading the artefact (CD pipeline)
 
 Two scenarios must be distinguished:
-1. The artefact is downloaded by the same pipeline
+1. The artefact is downloaded by the same pipeline (programmed so far)
 2. The artefact is downloaded by a different pipeline (our case)
 
 The first case is much simpler because it requires very few parameters similar to push. The exmample below shows an example:
