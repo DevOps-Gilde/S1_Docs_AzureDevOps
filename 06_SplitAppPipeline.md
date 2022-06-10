@@ -4,36 +4,36 @@ You should now have Completed the Following things:
 1. Setup your Azure DevOps Organization/ Project
 2. Setup your Azure DevOps Repository
 3. Setup your Azure DevOps Service Connection
-4. Setup the Infrastucture
+4. Setup the Infrastructure
 5. Setup Web Site
 
-The idea of this optional task is to give you a chance to get familiar with Azure Artefacts. Azure Artefact is a temporary store where you can store pipeline results such as your build result. In a typical scenario a CI pipeline is compiling the code artefact if the tests succeeded. The artefact is then pushed to Azure artefacts as the last step of the CI-pipeline run. A subseqeunt CD pipeline downloads the artefact for later deployment. The picure below shows the major involved components (Red marks the new component in focus)):
+The idea of this optional task is to give you a chance to get familiar with Azure Artifacts. Azure Artifact is a temporary store where you can store pipeline results such as your build result. In a typical scenario a CI pipeline is compiling the code artifact if the tests succeeded. The artifact is then pushed to Azure Artifacts as the last step of the CI-pipeline run. A subsequent CD pipeline downloads the artifact for later deployment. The picture below shows the major involved components (Red marks the new component in focus)):
 
 <br><img src="./images/pl_split_overview.png" /><br>
 
-NOTE: THis is an advanced where not everything is given as step by step instruction. Use information from the internet and what you have learnt in previous sections.
+NOTE: This is an advanced where not everything is given as step by step instruction. Use information from the internet and what you have learnt in previous sections.
 
 # 1. Setting up the Application Pipeline
 
-## Pushing the artefact (CI pipeline)
+## Pushing the artifact (CI pipeline)
 
-A special tast type exists For pushing an artefact such as a zip file to Azure artefacts. Not many parameters are needed as the example below shows:
+A special task type exists for pushing an artifact such as a zip file to Azure Artifacts. Not many parameters are needed as the example below shows:
 ```YAML
-# Publish an artefact named 'WebApp'
+# Publish an artifact named 'WebApp'
 - task: PublishPipelineArtifact@1
-    displayName: Create artefact
+    displayName: Create artifact
     inputs:
     targetPath: '$(build.artifactstagingdirectory)'
     artifactName: 'WebApp'
 ```
 
-## Downloading the artefact (CD pipeline)
+## Downloading the artifact (CD pipeline)
 
 Two scenarios must be distinguished:
-1. The artefact is downloaded by the same pipeline (programmed so far)
-2. The artefact is downloaded by a different pipeline (our case)
+1. The artifact is downloaded by the same pipeline (programmed so far)
+2. The artifact is downloaded by a different pipeline (our case)
 
-The first case is much simpler because it requires very few parameters similar to push. The exmample below shows an example:
+The first case is much simpler because it requires very few parameters similar to push. The example below shows an example:
 ```YAML
 # Download an artifact named 'WebApp' to 'bin' in $(Build.SourcesDirectory)
 - task: DownloadPipelineArtifact@2
@@ -41,9 +41,9 @@ The first case is much simpler because it requires very few parameters similar t
     artifact: 'WebApp'
     path: $(Build.SourcesDirectory)/bin
 ```
-A typical use case is when you want to work with the artefact across multiple jobs in the same pipeline. Every jobs starts from scratch and with this download command you can access the artefact very easily.
+A typical use case is when you want to work with the artifact across multiple jobs in the same pipeline. Every jobs starts from scratch and with this download command you can access the artifact very easily.
 
-The second case is our scenario. The relevant task type `DownloadBuildArtifacts` requires the internal id of the pipeline run that created the artefact. One way to tackle this problem is to use Azure Cli scripting. Hence, we will use an extra task that preceeds the `DownloadBuildArtifacts` task. We will use dynmaic variables to transport the values to the download task. To run the required scripting commands we first have to log in to Azure DevOps programatically as shown below:
+The second case is our scenario. The relevant task type `DownloadBuildArtifacts` requires the internal id of the pipeline run that created the artifact. One way to tackle this problem is to use Azure Cli scripting. Hence, we will use an extra task that precedes the `DownloadBuildArtifacts` task. We will use dynamic variables to transport the values to the download task. To run the required scripting commands we first have to log in to Azure DevOps programmatically as shown below:
 ```YAML
 - task: AzureCLI@2
   displayName: Get build id last CI pipeline run
@@ -72,15 +72,15 @@ The next command gives you the internal id of the last pipeline run:
 
 The starting point of the command are all pipeline runs of the CI pipeline returned as array. Each entry is a json structure. The two filter expressions reduce it to a simple value: (1) `--top 1` discards all entries except for the first one and (2) `--query [0].id` gives the value of the property id within the json structure:
 
-Now we have to store the id in a dynamic variable that can be picked up by the subsequent task as shown below. To reference the value in the subsequnt task use `$(buildId)`:
+Now we have to store the id in a dynamic variable that can be picked up by the subsequent task as shown below. To reference the value in the subsequent task use `$(buildId)`:
 
 `Write-Host "##vso[task.setvariable variable=BuildCiId]$buildId"`
 
 We have now completed all steps of our extra Azure Cli. The snippet below shows the complate Azure Cli task and the download. 
 ```YAML
-# 1. Determine id of pipeline that created the artefact
+# 1. Determine id of pipeline that created the artifact
 #    The "BuildId" refers to the internal id of the pipeline that created
-#    the artefact. This pipeline has multiple runs and we have to find the
+#    the artifact. This pipeline has multiple runs and we have to find the
 #    id of the last run.
 - task: AzureCLI@2
   displayName: Get build id last CI pipeline run
@@ -101,7 +101,7 @@ We have now completed all steps of our extra Azure Cli. The snippet below shows 
       $buildId = az pipelines build list --definition-ids $pipelineId --top 1 --query [0].id
       # Publish for next pipeline steps
       Write-Host "##vso[task.setvariable variable=BuildCiId]$buildId"
-# 2. Download the labeled artefact into our pipeline
+# 2. Download the labeled artifact into our pipeline
 - task: DownloadBuildArtifacts@0
   inputs:
     # Must be set otherwise pipeline is not used
@@ -109,9 +109,9 @@ We have now completed all steps of our extra Azure Cli. The snippet below shows 
     downloadType: 'single'
     buildVersionToDownload: 'specific'
     buildId: $(BuildCiId)
-    artifactName: <name of artefact>-$(BuildCiId)
+    artifactName: <name of artifact>-$(BuildCiId)
     # Internal identifier of the project id (can be inferred
-    # if you retrieve the URL of an artefact)
+    # if you retrieve the URL of an artifact)
     project: '$(System.TeamProjectId)'
     # Name of build pipeline for release build as displayed in the
     # Azure DevOps UI (Does not refer to the name of the Yaml filename).
