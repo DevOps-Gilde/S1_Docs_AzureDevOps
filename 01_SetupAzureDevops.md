@@ -6,7 +6,12 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 
 ## Sign in to Azure DevOps
 
-If you have already used Azure DevOps you can just use an existing organization and add a new project. The following steps describe a general way how you can navigate to an already existing organization or create a new one. If you know the name of your organization you can also directly jump to the management portal for Azure DevOps organizations that have the URL `https://dev.azure.com/<name of your organization>`:
+If you have already used Azure DevOps you can just use an existing organization and add a new project.
+
+> **Warning**
+> You only get a limited amount of free minutes per month to run pipelines. If you use an existing account **MAKE SURE** there are **ENOUGH FREE MINUTES LEFT**. If you are not sure create use a new account (Also a non-CapGemini email account is possible).
+
+The following steps describe a general way how you can navigate to an already existing organization or create a new one. If you know the name of your organization you can also directly jump to the management portal for Azure DevOps organizations that have the URL `https://dev.azure.com/<name of your organization>`:
 - Go to https://dev.azure.com/
 
   The picure below shows the initial screen. It states "Sign in" on the right-hand side if you are not yet signed in.
